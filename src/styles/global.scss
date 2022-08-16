@@ -1,6 +1,18 @@
-$brand-color: rgba(255, 72, 0, 0.701); 
+$brand-color: rgba(255, 72, 0, 0.701);
 
 body {
-   background-color: $brand-color;
-   color: white;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: $brand-color;
+  color: white;
+}
+
+.title {
+   padding: 1rem;
+}
+
+.dog-img {
+  max-width: 100vw;
+  max-height: 82vh;
+  object-fit: cover;
 }

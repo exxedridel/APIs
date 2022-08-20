@@ -1,3 +1,26 @@
 #blog-list {
    height: 100vh;
 }
+
+.blog-navbar {
+   background-color: beige;
+   color: black;
+   padding: 5px;
+   display: flex;
+   height: 30px;
+   align-items: center;
+}
+
+#blog-list {
+   padding: 10px;
+}
+
+.new-post {
+   margin-top: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: tomato;
+   max-width: 600px;
+   padding: 30px 30px;
+   display: grid;
+}

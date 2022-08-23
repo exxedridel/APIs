@@ -3,6 +3,11 @@ $brand-color: rgba(255, 72, 0, 0.701);
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
-  background-color: $brand-color;
+  background: rgb(255, 235, 235);
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 228, 228) 100%
+  );
   color: white;
 }

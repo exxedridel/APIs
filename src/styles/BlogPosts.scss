@@ -1,26 +1,68 @@
-#blog-list {
-   height: 100vh;
+.division {
+  padding: 6px;
+  background: rgb(78, 23, 63);
+  background: linear-gradient(
+    270deg,
+    rgba(78, 23, 63, 1) 0%,
+    rgba(121, 9, 79, 1) 51%,
+    rgba(112, 0, 55, 1) 100%
+  );
 }
 
 .blog-navbar {
-   background-color: beige;
-   color: black;
-   padding: 5px;
-   display: flex;
-   height: 30px;
-   align-items: center;
-}
-
-#blog-list {
-   padding: 10px;
+  background-color: rgb(243, 243, 230);
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  color: darkred;
+  padding: 5px;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .new-post {
-   margin-top: 20px;
-   margin-left: auto;
-   margin-right: auto;
-   background-color: tomato;
-   max-width: 600px;
-   padding: 30px 30px;
-   display: grid;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  color: black;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.112) 0%,
+    rgba(148, 188, 233, 0.214) 100%
+  );
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  padding: 30px 10px;
+  border-radius: 6px;
+  display: grid;
+}
+
+input#new-title,
+textarea#new-body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  padding: 5px 5px;
+  margin-bottom: 20px;
+}
+
+button.post-btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+#blog-list {
+  height: 85vh;
+  color: black;
+  background-color: transparent;
+  max-width: 950px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }

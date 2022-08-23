@@ -46,10 +46,12 @@ const BlogPosts = () => {
       .then((post) => {
         allPosts.unshift(post);
         console.log(allPosts);
+        setFormData({
+          title: "",
+          body: "",
+        }); //provisional option while not using "react-hook-form" nor reset() API
       });
   }
-
-  let form = document.getElementById("new-post")
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -90,30 +92,41 @@ const BlogPosts = () => {
 
 export default BlogPosts;
 
+// Vanilla JS refactored
+
+// let postsArray = []
+// const titleInput = document.getElementById("post-title")
+// const bodyInput = document.getElementById("post-body")
+// const form = document.getElementById("new-post")
+
+// function renderPosts() {
+//     let html = ""
+//     for (let post of postsArray) {
+//         html += `
+//             <h3>${post.title}</h3>
+//             <p>${post.body}</p>
+//             <hr />
+//         `
+//     }
+//     document.getElementById("blog-list").innerHTML = html
+// }
+
 // fetch("https://apis.scrimba.com/jsonplaceholder/posts")
 //     .then(res => res.json())
 //     .then(data => {
-//         const postsArr = data.slice(0, 5)
-//         let html = ""
-//         for (let post of postsArr) {
-//             html += `
-//                 <h3>${post.title}</h3>
-//                 <p>${post.body}</p>
-//                 <hr />
-//             `
-//         }
-//         document.getElementById("blog-list").innerHTML = html
+//         postsArray = data.slice(0, 5)
+//         renderPosts()
 //     })
 
-// document.getElementById("new-post").addEventListener("submit", function(e) {
+// form.addEventListener("submit", function(e) {
 //     e.preventDefault()
-//     const postTitle = document.getElementById("post-title").value
-//     const postBody = document.getElementById("post-body").value
+//     const postTitle = titleInput.value
+//     const postBody = bodyInput.value
 //     const data = {
 //         title: postTitle,
 //         body: postBody
 //     }
-
+    
 //     const options = {
 //         method: "POST",
 //         body: JSON.stringify(data),
@@ -121,15 +134,17 @@ export default BlogPosts;
 //             "Content-Type": "application/json"
 //         }
 //     }
-
+    
 //     fetch("https://apis.scrimba.com/jsonplaceholder/posts", options)
 //         .then(res => res.json())
 //         .then(post => {
-//             document.getElementById("blog-list").innerHTML = `
-//                 <h3>${post.title}</h3>
-//                 <p>${post.body}</p>
-//                 <hr />
-//                 ${document.getElementById("blog-list").innerHTML}
-//             `
+//             postsArray.unshift(post)
+//             renderPosts()
+//             /**
+//              * Solution while not using from.reset()
+//              */
+//             titleInput.value = ""
+//             bodyInput.value = ""
+//             // form.reset()
 //         })
 // })
